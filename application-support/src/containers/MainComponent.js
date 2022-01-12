@@ -14,16 +14,3 @@ export default function MainComponent() {
     )
 }
 
-export function OtherComponent() {
-    return (
-        <div>
-            <h1>This is Other Component for Application....</h1><hr/>
-            <HeaderComponent></HeaderComponent><hr/>
-            <ContentComponent></ContentComponent><hr/>
-            <FooterComponent></FooterComponent>
-        </div>
-    )
-}
-
-export var userName = "Mayank";
-
