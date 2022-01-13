@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom";
 import React from "react";
 
-import Component from "./components/EmployeeListComponent";
+import Component from "./statecomponents/SetStateIsAsynchronous";
 
 ReactDOM.render(<div>
-    <Component></Component>
+    <Component userName="Mayank Gupta"></Component>
 </div>, document.getElementById("root"));   
