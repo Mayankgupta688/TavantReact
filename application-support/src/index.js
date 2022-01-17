@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom";
 import React from "react";
 
-import Component from "./statecomponents/SetStateIsAsynchronous";
+import Component from "./singlePageApplication/ContainerComponent";
 
 ReactDOM.render(<div>
-    <Component userName="Mayank Gupta"></Component>
+    <Component></Component>
 </div>, document.getElementById("root"));   
