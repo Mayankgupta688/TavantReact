@@ -1,5 +1,5 @@
 import React from 'react';
-import EmployeeComponent from "../components/EmployeeComponent";
+import EmployeeComponent from "./EmployeeComponent";
 import Axios from "axios";
 
 export default class HomeComponent extends React.Component {
@@ -12,8 +12,7 @@ export default class HomeComponent extends React.Component {
     }
 
     componentDidMount() {
-        Axios.get("https://5a530e1477e1d20012fa066a.mockapi.io/login").then((response) => {
-            debugger;
+        Axios.get("http://localhost:4000/employees").then((response) => {
             this.setState({
                 employeeList: response.data
             })
@@ -25,7 +24,7 @@ export default class HomeComponent extends React.Component {
         return (
             <div>
                 {this.state.employeeList.map((employee) => {
-                    return <EmployeeComponent {...employee}></EmployeeComponent>
+                    return <EmployeeComponent {...employee} {...this.props}></EmployeeComponent>
                 })}
             </div>
         )

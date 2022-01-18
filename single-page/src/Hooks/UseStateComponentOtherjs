@@ -1,0 +1,24 @@
+import React, { useState } from "react";
+
+export default function UseStateComponent() {
+    
+    var [data, setData] = useState({
+        counter: 0,
+        intervalObj: null
+    });
+
+    if(data.intervalObj) {
+        clearInterval(data.intervalObj);
+    }
+
+    var obj = setInterval(() => {
+        setData({
+            counter: data.counter + 1,
+            intervalObj: obj
+        })
+    }, 1000);
+
+    return (
+        <h1>This is The Counter Value: {data.counter}</h1>
+    )
+}
